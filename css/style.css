@@ -1003,3 +1003,54 @@ p  { line-height: 1.75; color: var(--muted); }
   .hero-track-box { display: none; }
   .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
 }
+@media (max-width: 420px) {
+  /* Target the container with grid layout */
+  .section > div[style*="display:grid"] {
+    grid-template-columns: 1fr !important; /* Make grid single column */
+    gap: 16px !important; /* Reduce gap for smaller screens */
+  }
+  .top-bar {
+    flex-direction: column; /* stack items vertically */
+    padding: 10px; /* reduce padding */
+   
+  }
+  .top-bar i {
+    display: none; /* Hide the icon */
+  }
+  .separator {
+    display: none !important; /* Hide the separator */
+  }
+  .hero-stats { 
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 48px 0px 0px 0px;
+   }
+
+  .hero-stat{
+  flex-grow: 1;
+  flex-basis: 200px;
+  }
+
+  /* Stack elements vertically if needed */
+  .hero-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Resize text or buttons if necessary */
+  .hero-text {
+    font-size: 14px;
+  }
+
+  /* Make images or cards full width */
+  .cards {
+    width: 100%;
+  }
+
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+}
